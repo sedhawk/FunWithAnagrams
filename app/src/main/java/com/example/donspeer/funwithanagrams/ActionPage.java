@@ -11,6 +11,7 @@ public class ActionPage extends AppCompatActivity {
 
     Button quitGame;
     Button submit;
+    int tries = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,15 @@ public class ActionPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // checks the user answer then adds it to the score if right
+                tries--;
 
+                if (tries == 0){
+                    Intent intent = new Intent(getApplicationContext(), ScorePage.class);
+                    startActivity(intent);
+                }
+                else if (tries == 1){
+                    submit.setText("LAST CHANCE DRUNKARD!");
+                }
             }
         })  ;
 
