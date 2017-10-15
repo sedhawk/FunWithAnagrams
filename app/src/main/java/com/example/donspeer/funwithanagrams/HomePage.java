@@ -72,16 +72,16 @@ public class HomePage extends AppCompatActivity {
         })  ;
 
         // sources to drag
-        A1 = (TextView) findViewById(R.id.A1);
-        A2 = (TextView) findViewById(R.id.A2);
-        A3 = (TextView) findViewById(R.id.A3);
-        A4 = (TextView) findViewById(R.id.A4);
+        A1 = findViewById(R.id.A1);
+        A2 = findViewById(R.id.A2);
+        A3 = findViewById(R.id.A3);
+        A4 = findViewById(R.id.A4);
 
         // targets
-        D1 = (TextView) findViewById(R.id.D1);
-        D2 = (TextView) findViewById(R.id.D2);
-        D3 = (TextView) findViewById(R.id.D3);
-        D4 = (TextView) findViewById(R.id.D4);
+        D1 = findViewById(R.id.D1);
+        D2 = findViewById(R.id.D2);
+        D3 = findViewById(R.id.D3);
+        D4 = findViewById(R.id.D4);
 
         // make connection from sources to longClickListener
         A1.setOnLongClickListener(longClickListener);
@@ -100,7 +100,7 @@ public class HomePage extends AppCompatActivity {
     View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View view) {
-            ClipData data = ClipData.newPlainText("", "");
+            ClipData data = ClipData.newPlainText(".", ".");
             View.DragShadowBuilder myShadowBuilder = new View.DragShadowBuilder(view);
             view.startDrag(data, myShadowBuilder, view, 0);
             return true;
@@ -119,7 +119,7 @@ public class HomePage extends AppCompatActivity {
                     final View v = (View) dragEvent.getLocalState();
 
                     if (v.getId() == R.id.A1){
-                        D1.setText("?");  //grab value for first box
+                        D1.setText("?");  //TODO: grab value from dragged box instead
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
