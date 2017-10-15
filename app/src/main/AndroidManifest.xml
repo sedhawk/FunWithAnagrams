@@ -17,23 +17,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutPage">
+        <activity android:name=".AboutPage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ActionPage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
 
         </activity>
 
-        <activity android:name=".ActionPage">
+        <activity android:name=".LoginPage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
 
         </activity>
 
-        <activity android:name=".LoginPage">
+        <activity android:name=".SignupPage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
 
         </activity>
 
-        <activity android:name=".SignupPage">
-
-        </activity>
-
-        <activity android:name=".ScorePage">
+        <activity android:name=".ScorePage"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
 
         </activity>
     </application>
