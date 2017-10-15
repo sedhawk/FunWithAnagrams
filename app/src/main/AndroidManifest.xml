@@ -17,23 +17,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AboutPage">
-            
-        </activity>
-
-        <activity android:name=".ActionPage">
+        <activity android:name=".AboutPage" android:screenOrientation="landscape">
 
         </activity>
 
-        <activity android:name=".LoginPage">
+        <activity android:name=".ActionPage" android:screenOrientation="landscape">
 
         </activity>
 
-        <activity android:name=".SignupPage">
+        <activity android:name=".LoginPage" android:screenOrientation="landscape">
 
         </activity>
 
-        <activity android:name=".ScorePage">
+        <activity android:name=".SignupPage" android:screenOrientation="landscape">
+
+        </activity>
+
+        <activity android:name=".ScorePage"android:screenOrientation="landscape">
 
         </activity>
     </application>
