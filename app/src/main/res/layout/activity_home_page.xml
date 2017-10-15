@@ -36,7 +36,26 @@
         android:id="@+id/switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="191dp" />
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="192dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="97dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="28dp"
+        android:text="Offline Mode"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/play_button"
+        tools:layout_editor_absoluteX="234dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="74dp"
+        android:layout_height="23dp"
+        android:text="Off     On"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="249dp"
+        tools:layout_editor_absoluteY="219dp" />
 
 </android.support.constraint.ConstraintLayout>
