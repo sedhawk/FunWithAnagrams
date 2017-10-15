@@ -7,36 +7,68 @@
     android:layout_height="match_parent"
     tools:context="com.example.donspeer.funwithanagrams.HomePage">
 
-    <Button
-        android:id="@+id/play_button"
-        android:layout_width="212dp"
-        android:layout_height="67dp"
-        android:text="Fun With Anagrams"
+    <TableRow
+        android:layout_width="372dp"
+        android:layout_height="79dp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <TextView
+        android:id="@+id/bonus"
+        android:layout_width="75dp"
+        android:layout_height="49dp"
+        android:layout_marginLeft="16dp"
+        android:text="Bonus Locked"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteY="230dp" />
 
     <Button
-        android:id="@+id/login_button"
-        android:layout_width="111dp"
-        android:layout_height="48dp"
-        android:text="Login"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="178dp" />
-
-    <Button
-        android:id="@+id/account_button"
+        android:id="@+id/action_quit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create Account"
-        tools:layout_editor_absoluteX="355dp"
-        tools:layout_editor_absoluteY="178dp" />
+        android:background="@android:color/holo_red_dark"
+        android:text="Quit"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        tools:layout_editor_absoluteX="479dp"
+        tools:layout_editor_absoluteY="230dp" />
 
-    <Switch
-        android:id="@+id/switch"
+    <TextView
+        android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="191dp" />
+        android:text="Action"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="262dp" />
 
+    <TextView
+        android:id="@+id/level_view"
+        android:layout_width="75dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="16dp"
+        android:text="Level 1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <TableRow
+        android:layout_width="372dp"
+        android:layout_height="79dp"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tokens"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="501dp"
+        tools:layout_editor_absoluteY="29dp" />
 </android.support.constraint.ConstraintLayout>
