@@ -11,7 +11,44 @@
         android:layout_width="372dp"
         android:layout_height="79dp"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="151dp" />
+        tools:layout_editor_absoluteY="151dp" >
+
+        <TextView
+            android:id="@+id/D1"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/D2"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/D3"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/D4"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+    </TableRow>
 
     <TextView
         android:id="@+id/bonus"
@@ -28,11 +65,12 @@
         android:id="@+id/action_quit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
         android:background="@android:color/holo_red_dark"
         android:text="Quit"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        tools:layout_editor_absoluteX="479dp"
+        app:layout_constraintRight_toRightOf="parent"
         tools:layout_editor_absoluteY="230dp" />
 
     <TextView
@@ -54,13 +92,54 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        tools:layout_editor_absoluteY="83dp" />
+        tools:layout_editor_absoluteY="41dp" />
 
     <TableRow
         android:layout_width="372dp"
         android:layout_height="79dp"
         tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="49dp" />
+        tools:layout_editor_absoluteY="49dp" >
+
+        <TextView
+            android:id="@+id/A1"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:text="A"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/A2"
+            android:layout_width="90dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:text="B"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/A3"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:text="C"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/A4"
+            android:layout_width="93dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/border_style"
+            android:text="D"
+            android:textAlignment="center"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+    </TableRow>
 
     <TextView
         android:id="@+id/textView28"
@@ -74,11 +153,29 @@
 
     <TextView
         android:id="@+id/token_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="72dp"
         android:background="@drawable/text_round"
         android:text=" "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="496dp"
         tools:layout_editor_absoluteY="59dp" />
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/holo_green_light"
+        android:text="Check"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
