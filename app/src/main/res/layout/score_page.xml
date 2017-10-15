@@ -9,12 +9,12 @@
 
     <Button
         android:id="@+id/play_button"
-        android:layout_width="290dp"
-        android:layout_height="86dp"
+        android:layout_width="212dp"
+        android:layout_height="67dp"
         android:text="Fun With Anagrams"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="51dp" />
+        tools:layout_editor_absoluteY="70dp" />
 
     <Button
         android:id="@+id/login_button"
