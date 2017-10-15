@@ -18,23 +18,23 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutPage">
-
+            android:screenOrientation="landscape"
         </activity>
 
         <activity android:name=".ActionPage">
-
+            android:screenOrientation="landscape"
         </activity>
 
         <activity android:name=".LoginPage">
-
+            android:screenOrientation="landscape"
         </activity>
 
         <activity android:name=".SignupPage">
-
+            android:screenOrientation="landscape"
         </activity>
 
         <activity android:name=".ScorePage">
-
+            android:screenOrientation="landscape"
         </activity>
     </application>
 
