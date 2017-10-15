@@ -142,7 +142,7 @@
         android:id="@+id/textView17"
         android:layout_width="326dp"
         android:layout_height="22dp"
-        android:text="Created by Abulaziz Zarie & Don Speer"
+        android:text="Created by Abulaziz Zarie and Don Speer"
         android:textSize="18sp"
         tools:layout_editor_absoluteX="137dp"
         tools:layout_editor_absoluteY="263dp" />

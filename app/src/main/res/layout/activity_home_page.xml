@@ -58,4 +58,19 @@
         tools:layout_editor_absoluteX="249dp"
         tools:layout_editor_absoluteY="219dp" />
 
+    <Button
+        android:id="@+id/about"
+        android:layout_width="65dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/round_button"
+        android:text="?"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

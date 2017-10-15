@@ -71,4 +71,14 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="501dp"
         tools:layout_editor_absoluteY="29dp" />
+
+    <TextView
+        android:id="@+id/token_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_round"
+        android:text=" "
+        tools:layout_editor_absoluteX="496dp"
+        tools:layout_editor_absoluteY="59dp" />
+
 </android.support.constraint.ConstraintLayout>
