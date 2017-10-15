@@ -2,6 +2,7 @@ package com.example.donspeer.funwithanagrams;
 
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,8 @@ public class HomePage extends AppCompatActivity {
     Button play_button;
     // login button
     Button login_button;
+    // about button
+    Button about_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,7 @@ public class HomePage extends AppCompatActivity {
         account_button = (Button) findViewById(R.id.account_button); // connecting the sign up button
         play_button = (Button) findViewById(R.id.play_button); // connecting the fun with anagrams button
         login_button = (Button) findViewById(R.id.login_button); // same thing for login button
+        about_button = (Button) findViewById(R.id.about);
 
 
 
@@ -52,6 +56,15 @@ public class HomePage extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent intent = new Intent(getApplicationContext(), LoginPage.class);
+                startActivity(intent);
+            }
+        })  ;
+
+        about_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), AboutPage.class);
                 startActivity(intent);
             }
         })  ;
