@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".HomePage" >
+        <activity android:name=".HomePage" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,23 +18,23 @@
             </intent-filter>
         </activity>
         <activity android:name=".AboutPage">
-            android:screenOrientation="landscape"
+            
         </activity>
 
         <activity android:name=".ActionPage">
-            android:screenOrientation="landscape"
+
         </activity>
 
         <activity android:name=".LoginPage">
-            android:screenOrientation="landscape"
+
         </activity>
 
         <activity android:name=".SignupPage">
-            android:screenOrientation="landscape"
+
         </activity>
 
         <activity android:name=".ScorePage">
-            android:screenOrientation="landscape"
+
         </activity>
     </application>
 
