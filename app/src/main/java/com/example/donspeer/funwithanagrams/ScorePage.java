@@ -10,7 +10,8 @@ import android.widget.TextView;
 public class ScorePage extends AppCompatActivity {
 
     Button quit;
-    TextView textView23;
+    TextView textView23, textView24, textView25;
+    int userScore;
 
 
     @Override
@@ -19,7 +20,15 @@ public class ScorePage extends AppCompatActivity {
         setContentView(R.layout.score_page);
         quit = (Button) findViewById(R.id.score_quit);
         textView23 = findViewById(R.id.textView23);
+        textView24 = findViewById(R.id.textView24);
+        textView25 = findViewById(R.id.textView25);
         textView23.setText(""+ 3);
+
+
+        userScore = getIntent().getIntExtra("user-score", -1);
+
+        textView24.setText(""+userScore);
+        textView25.setText(""+userScore);
 
         quit.setOnClickListener(new View.OnClickListener() {
             @Override

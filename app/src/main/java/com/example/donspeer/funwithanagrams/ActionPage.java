@@ -74,6 +74,7 @@ public class ActionPage extends AppCompatActivity {
                 }
                 else if (tries <= -1){
                     Intent intent = new Intent(getApplicationContext(), ScorePage.class);
+                    intent.putExtra("user-score",score);
                     startActivity(intent);
                 }
 
