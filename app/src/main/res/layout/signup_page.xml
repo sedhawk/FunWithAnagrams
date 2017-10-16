@@ -55,7 +55,7 @@
             android:background="@drawable/border_style"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Create epic username"
+            android:hint="Create epic username"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="93dp" />
     </TableRow>
@@ -84,7 +84,7 @@
             android:background="@drawable/border_style"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Create password"
+            android:hint="Create password"
             tools:layout_editor_absoluteX="32dp"
             tools:layout_editor_absoluteY="178dp" />
 
@@ -129,7 +129,7 @@
             android:background="@drawable/border_style"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Verify password"
+            android:hint="Verify password"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="30dp" />
     </TableRow>

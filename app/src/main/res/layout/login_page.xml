@@ -44,7 +44,7 @@
             android:ems="10"
             android:fadingEdge="horizontal|vertical"
             android:inputType="textPersonName"
-            android:text="User Name"
+            android:hint="User Name"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.403"
@@ -100,7 +100,7 @@
             android:ems="10"
             android:fadingEdge="horizontal|vertical"
             android:inputType="textPersonName"
-            android:text="Password"
+            android:hint="Password"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="34dp" />
     </TableRow>

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -37,11 +38,24 @@ public class ActionPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.action_page);
 
+        // grab login and new account information
+        EditText loginName          = (EditText) findViewById(R.id.user_name);
+        EditText getPassword        = (EditText) findViewById(R.id.password);
+        EditText getNewName         = (EditText) findViewById(R.id.create_name);
+        EditText getNewPassword     = (EditText) findViewById(R.id.create_password);
+        EditText getVerifyPassword  = (EditText) findViewById(R.id.verify_password);
+
+        // store login and new account info into variable
+        /*String storeName            = loginName.getText().toString();
+        String storePassword        = getPassword.getText().toString();
+        String storeNewName         = getNewName.getText().toString();
+        String storeNewPassword     = getNewPassword.getText().toString();
+        String storeVerifyPassword  = getVerifyPassword.getText().toString();*/
 
 
-        quitGame = (Button) findViewById(R.id.action_quit);
-        submit = (Button) findViewById(R.id.submit_button);
-        level_view = findViewById(R.id.level_view);
+        quitGame    = (Button) findViewById(R.id.action_quit);
+        submit      = (Button) findViewById(R.id.submit_button);
+        level_view  = findViewById(R.id.level_view);
         token_total = findViewById(R.id.token_total);
 
         connector();
@@ -175,6 +189,10 @@ public class ActionPage extends AppCompatActivity {
         // fills the boxes
        for (int i = 0; i < boxArray.length; i++){
             boxArray[i].setText("" + word.charAt(i));
+            D1.setText("");
+            D2.setText("");
+            D3.setText("");
+            D4.setText("");
         }
 
     }
