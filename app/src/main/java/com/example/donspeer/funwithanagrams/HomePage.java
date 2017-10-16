@@ -22,7 +22,7 @@ public class HomePage extends AppCompatActivity {
     // about button
     Button about_button;
 
-    TextView A1, A2, A3, A4, D1, D2, D3, D4;
+    //TextView A1, A2, A3, A4, D1, D2, D3, D4;
 
 
     @Override
@@ -70,7 +70,7 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
             }
         })  ;
-
+/*
         // sources to drag
         A1 = findViewById(R.id.A1);
         A2 = findViewById(R.id.A2);
@@ -94,10 +94,10 @@ public class HomePage extends AppCompatActivity {
         D2.setOnDragListener(dragListener);
         D3.setOnDragListener(dragListener);
         D4.setOnDragListener(dragListener);
-
+*/
     }
 
-    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
+/*    View.OnLongClickListener longClickListener = new View.OnLongClickListener() {
         @Override
         public boolean onLongClick(View view) {
             ClipData data = ClipData.newPlainText(".", ".");
@@ -130,5 +130,5 @@ public class HomePage extends AppCompatActivity {
 
             return true;
         }
-    };
+    };*/
 }
