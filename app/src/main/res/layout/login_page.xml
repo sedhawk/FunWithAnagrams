@@ -45,6 +45,7 @@
             android:fadingEdge="horizontal|vertical"
             android:inputType="textPersonName"
             android:hint="User Name"
+            android:imeOptions="actionNext"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.403"
@@ -101,6 +102,8 @@
             android:fadingEdge="horizontal|vertical"
             android:inputType="textPersonName"
             android:hint="Password"
+            android:imeOptions="actionDone"
+            android:imeActionLabel="Welcome back to The Tavern"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="34dp" />
     </TableRow>
