@@ -67,6 +67,7 @@ public class ActionPage extends AppCompatActivity {
                 else if (tries == 1){
                     submit.setText("LAST CHANCE DRUNKARD!");
                 }
+                connector();
 
             }
         })  ;
@@ -221,10 +222,14 @@ public class ActionPage extends AppCompatActivity {
             A3.setText("E");
             A4.setText("S");
         } else if (level == 3){
-            A1.setText("S");
+           /* A1.setText("S");
             A2.setText("I");
             A3.setText("H");
-            A4.setText("T");
+            A4.setText("T");*/
+            A1.setText("" + level3Array[0].charAt(0));
+            A2.setText("" + level3Array[0].charAt(1));
+            A3.setText("" + level3Array[0].charAt(2));
+            A4.setText("" + level3Array[0].charAt(3));
         }
 
     }
