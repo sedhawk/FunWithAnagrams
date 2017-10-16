@@ -75,8 +75,13 @@ public class ActionPage extends AppCompatActivity {
             public void onClick(View v) {
                 // checks the user answer then adds it to the score if right
                 tries--;
-                level++;
-                connector();
+                if (level <=3){
+                    level++;
+                    connector();
+                    if (level == 3)
+                        level = 3;
+                }
+
                 level_view.setText("Level " + level);
                 token_total.setText("" + score);
                 if (tries == 0){
