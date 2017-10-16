@@ -20,10 +20,11 @@ public class ActionPage extends AppCompatActivity {
     Button submit;
     int tries = 3;
     int level = 1;
+    int score = 0;
     //String level1String = "IRDA";
     //String level2String = "OLES";
     //String level3String = "SIHT";
-    TextView A1, A2, A3, A4, D1, D2, D3, D4, level_view;
+    TextView A1, A2, A3, A4, D1, D2, D3, D4, level_view, token_total;
     String[] level1Array = {"ARID", "RAID"};
     String[] level2Array = {"LOSE", "SLOE","SOLE"};
     String[] level3Array = {"HIST", "SHIT", "SITH", "THIS"};
@@ -41,8 +42,10 @@ public class ActionPage extends AppCompatActivity {
         quitGame = (Button) findViewById(R.id.action_quit);
         submit = (Button) findViewById(R.id.submit_button);
         level_view = findViewById(R.id.level_view);
+        token_total = findViewById(R.id.token_total);
 
         connector();
+        token_total.setText("" + score);
 
         quitGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,15 +62,21 @@ public class ActionPage extends AppCompatActivity {
                 // checks the user answer then adds it to the score if right
                 tries--;
                 level++;
+                connector();
                 level_view.setText("Level " + level);
+                token_total.setText("" + score);
                 if (tries == 0){
+                    submit.setText("Click to reach scoreboard ya drunk!");
+
+                }
+                else if (tries == 1){
+                    submit.setText("LAST ONE DRUNKARD!");
+                }
+                else if (tries <= -1){
                     Intent intent = new Intent(getApplicationContext(), ScorePage.class);
                     startActivity(intent);
                 }
-                else if (tries == 1){
-                    submit.setText("LAST CHANCE DRUNKARD!");
-                }
-                connector();
+
 
             }
         })  ;
@@ -95,19 +104,6 @@ public class ActionPage extends AppCompatActivity {
 
             switch (dEvent){
                 case DragEvent.ACTION_DRAG_ENTERED:     //Tells us which view is dragged
-
-                    /*if (v.getId() == R.id.A1){
-                        D1.setText(A1.getText());  //TODO: grab value from dragged box instead
-                    }
-                    else if (v.getId() == R.id.A2) {
-                        D1.setText("N");
-                    }
-                    else if (v.getId() == R.id.A3) {
-                        D1.setText("N");
-                    }
-                    else if (v.getId() == R.id.A4) {
-                        D1.setText("N");
-                    }*/
 
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -149,7 +145,6 @@ public class ActionPage extends AppCompatActivity {
                     }
 
 
-                    //TODO: we need to make a way to print it in the desired box not just D1
                     break;
             }
 
@@ -157,28 +152,45 @@ public class ActionPage extends AppCompatActivity {
         }
     };
 
+    public static void main(String[] args){
+        // to test methods functionality
+        //Random r = new Random();
+       // System.out.println(genRandomNum(r,"RAID",4));
+
+    }
+
+
     public static String genRandomNum(Random rng, String characters, int length){
-        char[] text = new char[length];
-        for (int i = 0; i<length;i++){
-            text[i] = characters.charAt(rng.nextInt(characters.length()));
+        // shuffles the word
+        char[] text = characters.toCharArray();
+        for( int i=0 ; i<text.length ; i++ ){
+            int j = rng.nextInt(text.length);
+            char temp = text[i]; text[i] = text[j];  text[j] = temp;
         }
         return new String(text);
     }
 
     public void fillBoxes (TextView[] boxArray, String word){
-        //   for(int i = 0; i < boxArray.length;i++){
-        //     boxArray[i].setText(level1Word.charAt(i));
-        //}
-       for (int i = 0; i < boxArray.length-1; i++){
+        // fills the boxes
+       for (int i = 0; i < boxArray.length; i++){
             boxArray[i].setText("" + word.charAt(i));
         }
-        /*
-        boxArray[0].setText(word.charAt(0));
-        boxArray[1].setText(word.charAt(1));
-        boxArray[2].setText(word.charAt(2));
-        boxArray[3].setText(word.charAt(3));
-        */
+
     }
+    public void checkBoxes(TextView[] choiceAr, String[] answerAr){
+        // checks the user answer
+        String userChoice = "";
+        for (int i = 0; i < choiceAr.length; i++){
+            userChoice += choiceAr[i].getText();
+        }
+
+        for (int x = 0; x <answerAr.length; x++){
+            if(answerAr[x].equals(userChoice)){
+                score++;
+            }
+        }
+    }
+
 
     public void connector () {
 
@@ -207,31 +219,27 @@ public class ActionPage extends AppCompatActivity {
         D4.setOnDragListener(dragListener);
 
         TextView[] boxArray = {A1, A2, A3, A4};
+        TextView[] answerArray = {D1, D2, D3, D4};
 
-        //String level1Word = level1Array[1];
-        //level1Word = genRandomNum(r,level1Word,4);
+        // if statements that fill the boxes then in the other case checks the answers
         if (level == 1){
-          //  fillBoxes(boxArray, level1Word);
-            A1.setText("I");
-            A2.setText("R");
-            A3.setText("D");
-            A4.setText("A");
+
+            fillBoxes(boxArray, genRandomNum(r,level1Array[0],4));
+
+
         } else if (level == 2){
-            A1.setText("O");
-            A2.setText("L");
-            A3.setText("E");
-            A4.setText("S");
+            checkBoxes(answerArray, level1Array);
+            fillBoxes(boxArray,genRandomNum(r,level2Array[0],4));
+
+
+
         } else if (level == 3){
-           /* A1.setText("S");
-            A2.setText("I");
-            A3.setText("H");
-            A4.setText("T");
-            A1.setText("" + level3Array[0].charAt(0));
-            A2.setText("" + level3Array[0].charAt(1));
-            A3.setText("" + level3Array[0].charAt(2));
-            A4.setText("" + level3Array[0].charAt(3));
-            */
-           fillBoxes(boxArray,level1Array[0]);
+
+            checkBoxes(answerArray, level2Array);
+            fillBoxes(boxArray,genRandomNum(r,level3Array[0],4));
+
+        } else if (level == 4) {
+            checkBoxes(answerArray, level3Array);
         }
 
     }
