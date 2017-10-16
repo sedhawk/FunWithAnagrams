@@ -133,7 +133,7 @@
             android:inputType="textPersonName"
             android:hint="Verify password"
             android:imeOptions="actionDone"
-            android:imeActionLabel="Now what would you like to drink?"
+            android:imeActionLabel="Now, what to drink?"
             app:layout_constraintBottom_toBottomOf="parent"
             tools:layout_editor_absoluteX="30dp" />
     </TableRow>
