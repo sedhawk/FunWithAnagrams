@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 
 
@@ -22,15 +23,29 @@ public class HomePage extends AppCompatActivity {
     // about button
     Button about_button;
 
+    Switch aSwitch;
+
+    int switchState = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        aSwitch = findViewById(R.id.on_off_mode);
+        aSwitch.setChecked(true);
         account_button = findViewById(R.id.account_button); // connecting the sign up button
         play_button = findViewById(R.id.play_button); // connecting the fun with anagrams button
         login_button = findViewById(R.id.login_button); // same thing for login button
         about_button = findViewById(R.id.about);
+
+
+        // determining on or off switch
+        switchState = getIntent().getIntExtra("switch-state", -1);
+        if (switchState>=1){
+            aSwitch.setChecked(false);
+        }
 
 
         // user clicking then going to sign up page
