@@ -169,15 +169,15 @@ public class ActionPage extends AppCompatActivity {
         //   for(int i = 0; i < boxArray.length;i++){
         //     boxArray[i].setText(level1Word.charAt(i));
         //}
-     //   for (int i = 0; i < boxArray.length; i++){
-       //     boxArray[i].setText(word.charAt(i));
-        //}
-
+       for (int i = 0; i < boxArray.length-1; i++){
+            boxArray[i].setText("" + word.charAt(i));
+        }
+        /*
         boxArray[0].setText(word.charAt(0));
         boxArray[1].setText(word.charAt(1));
         boxArray[2].setText(word.charAt(2));
         boxArray[3].setText(word.charAt(3));
-
+        */
     }
 
     public void connector () {
@@ -206,7 +206,7 @@ public class ActionPage extends AppCompatActivity {
         D3.setOnDragListener(dragListener);
         D4.setOnDragListener(dragListener);
 
-        //TextView[] boxArray = {A1, A2, A3, A4};
+        TextView[] boxArray = {A1, A2, A3, A4};
 
         //String level1Word = level1Array[1];
         //level1Word = genRandomNum(r,level1Word,4);
@@ -225,11 +225,13 @@ public class ActionPage extends AppCompatActivity {
            /* A1.setText("S");
             A2.setText("I");
             A3.setText("H");
-            A4.setText("T");*/
+            A4.setText("T");
             A1.setText("" + level3Array[0].charAt(0));
             A2.setText("" + level3Array[0].charAt(1));
             A3.setText("" + level3Array[0].charAt(2));
             A4.setText("" + level3Array[0].charAt(3));
+            */
+           fillBoxes(boxArray,level1Array[0]);
         }
 
     }
