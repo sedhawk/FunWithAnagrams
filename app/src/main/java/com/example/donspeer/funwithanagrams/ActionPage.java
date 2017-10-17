@@ -19,7 +19,7 @@ public class ActionPage extends AppCompatActivity {
 
     Button quitGame;
     Button submit;
-    int tries = 3;
+    int tries = 2;
     int level = 1;
     int score = 0;
     //String level1String = "IRDA";
@@ -78,17 +78,17 @@ public class ActionPage extends AppCompatActivity {
                 if (level <=3){
                     level++;
                     connector();
-                    if (level == 3)
-                        level = 3;
+
+
                 }
+
+                 if (level > 3)
+                    level = 3;
 
                 level_view.setText("Level " + level);
                 token_total.setText("" + score);
-                if (tries == 0){
-                    submit.setText("Click to reach scoreboard ya drunk!");
 
-                }
-                else if (tries == 1){
+                if (tries == 0){
                     submit.setText("LAST ONE DRUNKARD!");
                 }
                 else if (tries <= -1){
@@ -201,6 +201,8 @@ public class ActionPage extends AppCompatActivity {
         }
 
     }
+
+
     public void checkBoxes(TextView[] choiceAr, String[] answerAr){
         // checks the user answer
         String userChoice = "";
